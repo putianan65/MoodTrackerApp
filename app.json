@@ -4,26 +4,43 @@
     "slug": "MoodTrackerApp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+
+    "icon": "./assets/icon.png",
+
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#FFFFFF"
     },
+
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "icon": "./assets/icon.png"
     },
+
     "android": {
+      "package": "com.moodtracker26.MoodTrackerApp",
+      "edgeToEdgeEnabled": true,
+      "icon": "./assets/icon.png",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true
+        "backgroundColor": "#FFFFFF"
+      }
     },
+
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+
+    "plugins": ["expo-notifications"],
+
+    "extra": {
+      "eas": {
+        "projectId": "086738b8-6e79-48ca-9240-d965b10aeb7d"
+      }
     }
   }
+  
 }

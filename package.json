@@ -4,19 +4,39 @@
   "main": "index.ts",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "postinstall": "patch-package",
+
+    "eas-build-pre-build": "expo prebuild --platform android --clean"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "2.1.2",
+    "@react-navigation/native": "^7.1.14",
+    "@react-navigation/native-stack": "^7.3.13",
+    "dayjs": "^1.11.13",
     "expo": "~53.0.9",
+    "expo-notifications": "~0.31.4",
     "expo-status-bar": "~2.2.3",
+    "patch-package": "^8.0.0",
+    "postinstall-postinstall": "^2.1.0",
     "react": "19.0.0",
-    "react-native": "0.79.2"
+    "react-native": "0.79.5",
+    "react-native-chart-kit": "^6.12.0",
+    "react-native-gesture-handler": "~2.24.0",
+    "react-native-linear-gradient": "^2.8.3",
+    "react-native-reanimated": "~3.17.4",
+    "react-native-safe-area-context": "5.4.0",
+    "react-native-screens": "~4.11.1",
+    "react-native-svg": "15.11.2",
+    "react-native-vector-icons": "^10.2.0",
+    "expo-dev-client": "~5.2.4"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~19.0.10",
+    "hermes-parser": "^0.29.1",
     "typescript": "~5.8.3"
   },
   "private": true
