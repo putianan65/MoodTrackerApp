@@ -3,18 +3,27 @@
     "name": "MoodTrackerApp",
     "slug": "MoodTrackerApp",
     "description": "A React Native mood tracking app for daily mood logging, activity tracking, history review, and weekly visual summaries.",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
-
+    "backgroundColor": "#F0EEFA",
     "icon": "./assets/icon_padded.png",
-
     "splash": {
       "image": "./assets/splash-icon_padded.png",
       "resizeMode": "contain",
-      "backgroundColor": "#FFFFFF"
+      "backgroundColor": "#F0EEFA"
     },
-
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "UISupportedInterfaceOrientations~ipad": [
+          "UIInterfaceOrientationPortrait",
+          "UIInterfaceOrientationPortraitUpsideDown",
+          "UIInterfaceOrientationLandscapeLeft",
+          "UIInterfaceOrientationLandscapeRight"
+        ]
+      }
+    },
     "android": {
       "package": "com.moodtracker26.MoodTrackerApp",
       "versionCode": 6,
@@ -39,7 +48,10 @@
         "android.permission.USE_EXACT_ALARM"
       ]
     },
-
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
     "plugins": [
       "expo-notifications",
       [
@@ -51,9 +63,10 @@
             "buildToolsVersion": "35.0.0"
           }
         }
-      ]
+      ],
+      "expo-video",
+      "expo-font"
     ],
-
     "extra": {
       "eas": {
         "projectId": "086738b8-6e79-48ca-9240-d965b10aeb7d"
